@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deuce — Davonte Harris</title>
+  <meta name="description" content="Davonte 'Deuce' Harris — CEO/Founder of Almont Records. Producer, drummer, songwriter. Detroit / Los Angeles." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph / Social link previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deuce — Davonte Harris" />
+  <meta property="og:description" content="CEO/Founder of Almont Records. Producer, drummer, songwriter. Detroit / Los Angeles." />
+  <meta property="og:image" content="og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://yodeuce.com/" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deuce — Davonte Harris" />
+  <meta name="twitter:description" content="CEO/Founder of Almont Records. Producer, drummer, songwriter. Detroit / Los Angeles." />
+  <meta name="twitter:image" content="og.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --bg-grad: #141417;
+      --fg: #ededed;
+      --muted: #8a8a8f;
+      --accent: #d4af6a;
+      --line: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100%;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(212,175,106,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(212,175,106,0.04) 0%, transparent 50%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-grad) 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 1.5rem;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      font-weight: 500;
+    }
+
+    .eyebrow .dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin: 0 0.6em;
+      vertical-align: middle;
+    }
+
+    h1.name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(5rem, 18vw, 11rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .fullname {
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      font-weight: 400;
+    }
+
+    .bio {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      line-height: 1.6;
+      color: #cfcfcf;
+      max-width: 540px;
+      margin-bottom: 3.5rem;
+    }
+
+    .bio .accent {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .cta {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--fg);
+      text-decoration: none;
+      padding: 0.95rem 2rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      margin-bottom: 3rem;
+      font-weight: 500;
+    }
+
+    .cta:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .socials {
+      display: flex;
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .socials a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+      font-weight: 500;
+    }
+
+    .socials a:hover { color: var(--fg); }
+
+    .press {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      width: 100%;
+      max-width: 460px;
+    }
+
+    .press-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .press a {
+      color: #b8b8be;
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      transition: color 0.25s ease;
+    }
+
+    .press a:hover { color: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      font-weight: 500;
+    }
+
+    /* Background video layer */
+    .hero-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 30% 35%;
+      transform-origin: 30% 35%;
+      animation: heroFadeIn 1.8s ease both;
+    }
+
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: scale(1.32); }
+      to   { opacity: 1; transform: scale(1.22); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.72) 45%, rgba(10,10,11,0.9) 100%),
+        radial-gradient(ellipse at 50% 45%, rgba(10,10,11,0) 0%, rgba(10,10,11,0.35) 75%);
+    }
+
+    main, footer { position: relative; z-index: 1; }
+
+    @media (max-width: 480px) {
+      main { padding: 3rem 1.25rem; }
+      .socials { gap: 1.25rem; }
+      .press { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background hero image. Swap hero.jpg in this folder to change it. -->
+  <div class="hero-bg" aria-hidden="true">
+    <img class="hero-img" src="hero.jpg" alt="" />
+    <div class="hero-overlay"></div>
+  </div>
+
+
+  <main>
+    <div class="eyebrow">Detroit <span class="dot"></span> Los Angeles</div>
+
+    <h1 class="name">Deuce</h1>
+    <div class="fullname">Davonte &ldquo;Deuce&rdquo; Harris</div>
+
+    <p class="bio">
+      CEO and founder of <span class="accent">Almont Records</span>. Producer, drummer, and songwriter raised behind a drum kit and built on one belief &mdash; that artists belong at the center of the music they make.
+    </p>
+
+    <a class="cta" href="mailto:yodeuce2@gmail.com">Get in touch</a>
+
+    <nav class="socials" aria-label="Social links">
+      <a href="https://instagram.com/yodeuce" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@yodeuce" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.tiktok.com/@yodeuce" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.facebook.com/DavonteHdrums" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+
+    <div class="press">
+      <span class="press-label">As seen in</span>
+      <a href="https://canvasrebel.com/meet-davonte-deuce-harris/" target="_blank" rel="noopener">CanvasRebel</a>
+      <!-- TODO: replace # below with the exact Voyage LA article URL -->
+      <a href="#" target="_blank" rel="noopener">Voyage LA</a>
+    </div>
+  </main>
+
+  <footer>&copy; <span id="year"></span> Davonte Harris</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
